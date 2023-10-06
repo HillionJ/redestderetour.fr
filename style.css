@@ -105,14 +105,24 @@ footer {
 }
 
 .product:hover {
-  transform: scale(1.1); /* Augmente la taille de l'image de 10% */
+  transform: scale(1.05); /* Augmente la taille de l'image de 10% */
   filter: grayscale(0%); /* Applique un effet de gris à 50% sur le reste de la page */
 }
 
 
+.product-image-container:hover img {
+  transform: scale(1.3); /* Augmente la taille de l'image de 10% */
+}
+
+.product-image-container {
+  display: flex;
+  overflow: hidden;
+}
+
 .product img {
   max-width: 100%;
   height: auto;
+  transition: transform 0.5s ease, filter 0.5s ease; /* Ajoute une transition de 0.3 seconde aux propriétés transform et filter */
 }
 
 .product-title {

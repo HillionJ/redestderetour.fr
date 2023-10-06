@@ -5,9 +5,13 @@ function addProduct(imageSrc, title, description, price, elementID) {
   var productDiv = document.createElement("div");
   productDiv.classList.add("product");
 
+  var imgDiv = document.createElement("div");
+  imgDiv.classList.add("product-image-container");
+  productDiv.appendChild(imgDiv);
+
   var image = document.createElement("img");
   image.src = imageSrc;
-  productDiv.appendChild(image);
+  imgDiv.appendChild(image);
 
   var productTitle = document.createElement("div");
   productTitle.classList.add("product-title");

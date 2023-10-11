@@ -13,6 +13,14 @@ function addProduct(imageSrc, title, description, price, elementID) {
   image.src = imageSrc;
   imgDiv.appendChild(image);
 
+  var zoomDiv = document.createElement("div");
+  zoomDiv.classList.add("zoom-icon");
+  imgDiv.appendChild(zoomDiv);
+
+  var zoomImg = document.createElement("img");
+  zoomImg.src = "loupe.png";
+  zoomDiv.appendChild(zoomImg);
+
   var productTitle = document.createElement("div");
   productTitle.classList.add("product-title");
   productTitle.textContent = title;

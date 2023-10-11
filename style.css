@@ -164,6 +164,17 @@ footer ul {
   list-style-type: none;
 }
 
+.zoom-icon {
+  position: absolute;
+  img {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    float: left;
+  }
+}
+
 /* -------------- PAGE DU PRODUIT -------------- */
 
 main {

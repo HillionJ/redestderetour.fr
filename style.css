@@ -114,6 +114,14 @@ footer {
   filter: grayscale(0%); /* Applique un effet de gris à 50% sur le reste de la page */
 }
 
+.product-image-container:hover .zoom-icon img {
+  transform: scale(1); /* Augmente la taille de l'image de 10% */
+}
+
+.product-image-container:hover .zoom-icon img {
+  transform: scale(1); /* Augmente la taille de l'image de 10% */
+}
+
 .product-image-container {
   display: flex;
   overflow: hidden;

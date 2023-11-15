@@ -15,7 +15,7 @@ function addProduct(imageSrc, title, description, price, elementID) {
 
   var zoomDiv = document.createElement("div");
   zoomDiv.classList.add("zoom-icon");
-  productDiv.appendChild(zoomDiv);
+  imgDiv.appendChild(zoomDiv);
 
   var zoomImg = document.createElement("img");
   zoomImg.src = "loupe.png";

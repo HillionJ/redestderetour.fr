@@ -1,4 +1,3 @@
-// Fonction pour ajouter un produit au catalogue
 function addProduct(imageSrc, title, description, price, elementID) {
   var container = document.getElementById(elementID);
 
@@ -12,6 +11,11 @@ function addProduct(imageSrc, title, description, price, elementID) {
   var image = document.createElement("img");
   image.src = imageSrc;
   imgDiv.appendChild(image);
+
+  var productInfoBox = document.createElement("div");
+  productInfoBox.classList.add("product-info-box");
+  productInfoBox.textContent = "INDISPONIBLE";
+  imgDiv.appendChild(productInfoBox);
 
   var zoomDiv = document.createElement("div");
   zoomDiv.classList.add("zoom-icon");

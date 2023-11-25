@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <title>RedEstDeRetour Shop</title>
   <link rel="icon" href="icon.png">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-  
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js"></script>
+
 </head>
+
 <body>
+  <div id="loading">
+    <video autoplay loop muted>
+      <source src="loading.webm" type="video/webm">
+      Votre navigateur ne prend pas en charge la balise vidéo.
+    </video>
+    <p>Chargement de la boutique</p>
+  </div>
+  <script>
+    function load() {
+      let loading = document.getElementById("loading");
+      loading.style.display = "none";
+    }
+    window.addEventListener('load', load);
+  </script>
+
   <header>
     <img class="logo" src="logo.png" alt="Logo du site" style="height: 200px; width: 200px">
     <a href="#" class="menu-toggle">MENU</a>
@@ -24,7 +41,17 @@
     </ul>
   </nav>
 
-  <h1 class="catalog-indicator">T-Shirt Classique</h1><hr>
+  <h1 class="catalog-indicator">-- Exlus Dream Team (hiver 2023) --</h1>
+  <hr>
+  <div id="product-catalog-exclu" class="product-container"></div>
+  <script>
+    addProduct("photos/jupe/red.png", "Jupe de Malya floquée RED", "100% Pur sah kel plaisir", "78,81€", "product-catalog-exclu");
+    addProduct("photos/jupe/fury2.png", "Combinaison de Fury", "10% micro-ondes", "97,12€", "product-catalog-exclu");
+    addProduct("photos/jupe/zeltuv.png", "Bandana Zeltuv", "100% Moulant et sexy", "127,40€", "product-catalog-exclu");
+  </script>
+  </div>
+  <h1 class="catalog-indicator">T-Shirt Classique</h1>
+  <hr>
   <div id="product-catalog-classic" class="product-container">
     <!-- Ajoutez vos produits ici en utilisant la fonction addProduct() -->
     <script>
@@ -37,21 +64,23 @@
       addProduct("photos/classic/violet.png", "T-shirt violet", "100% Conton", "13,90€", "product-catalog-classic");
     </script>
   </div>
-  <h1 class="catalog-indicator">T-shirt à motif (deux couleurs)</h1><hr>
+  <h1 class="catalog-indicator">T-shirt à motif (deux couleurs)</h1>
+  <hr>
   <div id="product-catalog-color2" class="product-container"></div>
-    <script>
-      addProduct("photos/color2/motif-rose-bleu.png", "T-shirt rose et bleu", "100% Conton", "15,90€", "product-catalog-color2");
-      addProduct("photos/color2/motif-vert-orange.png", "T-shirt vert et orange", "100% Conton", "15,90€", "product-catalog-color2");
-      addProduct("photos/color2/motif-violet-rose.png", "T-shirt violet et rose", "100% Conton", "15,90€", "product-catalog-color2");
-    </script>
+  <script>
+    addProduct("photos/color2/motif-rose-bleu.png", "T-shirt rose et bleu", "100% Conton", "15,90€", "product-catalog-color2");
+    addProduct("photos/color2/motif-vert-orange.png", "T-shirt vert et orange", "100% Conton", "15,90€", "product-catalog-color2");
+    addProduct("photos/color2/motif-violet-rose.png", "T-shirt violet et rose", "100% Conton", "15,90€", "product-catalog-color2");
+  </script>
   </div>
-  <h1 class="catalog-indicator">T-shirt à motif (une couleur)</h1><hr>
+  <h1 class="catalog-indicator">T-shirt à motif (une couleur)</h1>
+  <hr>
   <div id="product-catalog-color1" class="product-container"></div>
-    <script>
-      addProduct("photos/color1/motif-blanc-bleu.png", "T-shirt bleu et blanc", "100% Conton", "17,90€", "product-catalog-color1");
-      addProduct("photos/color1/motif-blanc-rouge.png", "T-shirt rouge et blanc", "100% Conton", "17,90€", "product-catalog-color1");
-      addProduct("photos/color1/motif-blanc-vert.png", "T-shirt vert et blanc", "100% Conton", "17,90€", "product-catalog-color1");
-    </script>
+  <script>
+    addProduct("photos/color1/motif-blanc-bleu.png", "T-shirt bleu et blanc", "100% Conton", "17,90€", "product-catalog-color1");
+    addProduct("photos/color1/motif-blanc-rouge.png", "T-shirt rouge et blanc", "100% Conton", "17,90€", "product-catalog-color1");
+    addProduct("photos/color1/motif-blanc-vert.png", "T-shirt vert et blanc", "100% Conton", "17,90€", "product-catalog-color1");
+  </script>
   </div>
 
   <footer>
@@ -63,4 +92,5 @@
     </ul>
   </footer>
 </body>
+
 </html>

@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <title>RedEstDeRetour Shop</title>
   <link rel="icon" href="icon.png">
-  <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 
 </head>
 
@@ -18,11 +18,10 @@
     <p>Chargement de la boutique</p>
   </div>
   <script>
-    function load() {
+    window.addEventListener('load', ()=>{
       let loading = document.getElementById("loading");
       loading.style.display = "none";
-    }
-    window.addEventListener('load', load);
+    });
   </script>
 
   <header>
